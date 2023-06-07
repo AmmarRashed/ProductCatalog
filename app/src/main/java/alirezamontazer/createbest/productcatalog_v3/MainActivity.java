@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextName = (EditText) findViewById(R.id.editTextName);
-        editTextPrice = (EditText) findViewById(R.id.editTextPrice);
-        listViewProducts = (ListView) findViewById(R.id.listViewProducts);
-        buttonAddProduct = (Button) findViewById(R.id.addButton);
+        editTextName = findViewById(R.id.editTextName);
+        editTextPrice = findViewById(R.id.editTextPrice);
+        listViewProducts = findViewById(R.id.listViewProducts);
+        buttonAddProduct = findViewById(R.id.addButton);
 
         products = new ArrayList<>();
         database = FirebaseDatabase.getInstance();
@@ -77,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
         final View dialogView = inflater.inflate(R.layout.update_dialog, null);
         dialogBuilder.setView(dialogView);
 
-        final EditText editTextName = (EditText) dialogView.findViewById(R.id.dialog_editTextName);
-        final EditText editTextPrice = (EditText) dialogView.findViewById(R.id.dialog_editTextPrice);
-        final Button buttonUpdate = (Button) dialogView.findViewById(R.id.buttonUpdateProduct);
-        final Button buttonDelete = (Button) dialogView.findViewById(R.id.buttonDeleteProduct);
+        final EditText editTextName = dialogView.findViewById(R.id.dialog_editTextName);
+        final EditText editTextPrice = dialogView.findViewById(R.id.dialog_editTextPrice);
+        final Button buttonUpdate = dialogView.findViewById(R.id.buttonUpdateProduct);
+        final Button buttonDelete = dialogView.findViewById(R.id.buttonDeleteProduct);
 
         dialogBuilder.setTitle(productName);
         final AlertDialog b = dialogBuilder.create();
