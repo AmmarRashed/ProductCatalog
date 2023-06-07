@@ -15,7 +15,7 @@ public class ProductList extends ArrayAdapter<Product> {
     List<Product> products;
 
     public ProductList(Activity context, List<Product> products) {
-        super(context, R.layout.layout_product_list, products);
+        super(context, R.layout.layout_product_item, products);
         this.context = context;
         this.products = products;
     }
@@ -23,7 +23,7 @@ public class ProductList extends ArrayAdapter<Product> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        View listViewItem = inflater.inflate(R.layout.layout_product_list, null, true);
+        View listViewItem = inflater.inflate(R.layout.layout_product_item, null, true);
 
         TextView textViewName = listViewItem.findViewById(R.id.textViewName);
         TextView textViewPrice = listViewItem.findViewById(R.id.textViewPrice);
